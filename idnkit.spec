@@ -30,7 +30,7 @@ IETF. G³ówne w³asno¶ci dostarczane przez idnkit s± nastêpuj±ce:
  - libidnkit - g³ówna biblioteka do przetwarzania IDN,
  - libidnkitlite - lekka biblioteka do przetwarzania IDN (tylko UTF-8),
  - idnconv - konwerter kodowania plików konfiguracyjnych i stref DNS
- - runidn / idn wrapper - dynamicznie linkowana biblioteka resolvera
+ - runidn / idn wrapper - dynamicznie konsolidowana biblioteka resolvera
    dla uniksów i Windows.
 
 %package devel
