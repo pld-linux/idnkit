@@ -87,8 +87,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/idnconv
 %attr(755,root,root) %{_bindir}/runidn
 %attr(755,root,root) %{_libdir}/libidnkit*.so.*.*.*
-# Yes, this is for dlopen()
-%{_libdir}/libidnkit*.la
+# this one is used by runidn
+%{_libdir}/libidnkitres.la
 %dir %{_datadir}/idnkit
 %{_datadir}/idnkit/*.map
 %{_mandir}/man1/*.1*
@@ -97,6 +97,8 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libidnkit*.so
+%{_libdir}/libidnkit.la
+%{_libdir}/libidnkitlite.la
 %dir %{_includedir}/idn
 %{_includedir}/idn/*.h
 %{_mandir}/man3/*.3*
