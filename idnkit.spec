@@ -9,7 +9,6 @@ Source0:	http://www.nic.ad.jp/ja/idn/idnkit/download/sources/%{name}-%{version}-
 # Source0-md5:	e8863c21c5049af358bd59c384ff3e5d
 URL:		http://www.nic.ad.jp/en/idn/index.html
 BuildRequires:	automake
-BuildRequires:	libiconv-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
