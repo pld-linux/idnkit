@@ -1,7 +1,7 @@
 Summary:	idnkit
 Name:		idnkit
 Version:	1.0
-Release:	1
+Release:	2
 License:	BSD-like
 Group:		Libraries
 Source0:	http://www.nic.ad.jp/ja/idn/idnkit/download/sources/%{name}-%{version}-src.tar.gz
@@ -92,6 +92,7 @@ rm -rf $RPM_BUILD_ROOT
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libidnkit*.so
+%dir %{_includedir}/idn
 %{_includedir}/idn/*.h
 %{_mandir}/man3/*.3*
 
