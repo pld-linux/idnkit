@@ -2,13 +2,14 @@ Summary:	idnkit - internationalized domain name toolkit
 Summary(pl):	idnkit - zestaw narzêdzi do umiêdzynarodowionych nazw domen
 Name:		idnkit
 Version:	1.0
-Release:	3
+Release:	4
 License:	BSD-like
 Group:		Libraries
 Source0:	http://www.nic.ad.jp/ja/idn/idnkit/download/sources/%{name}-%{version}-src.tar.gz
 # Source0-md5:	e8863c21c5049af358bd59c384ff3e5d
 URL:		http://www.nic.ad.jp/en/idn/index.html
 BuildRequires:	automake
+BuildRequires:	libiconv-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
