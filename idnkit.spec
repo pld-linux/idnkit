@@ -8,6 +8,7 @@ Group:		Libraries
 Source0:	http://www.nic.ad.jp/ja/idn/idnkit/download/sources/%{name}-%{version}-src.tar.gz
 # Source0-md5:	e8863c21c5049af358bd59c384ff3e5d
 URL:		http://www.nic.ad.jp/en/idn/index.html
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -61,6 +62,7 @@ Statyczna biblioteka idnkit.
 %setup -q -n %{name}-%{version}-src
 
 %build
+cp /usr/share/automake/config.sub .
 %configure2_13 \
 	--enable-extra-ace \
 	--enable-runidn
