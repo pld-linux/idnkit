@@ -62,7 +62,7 @@ Statyczna biblioteka idnkit.
 %setup -q -n %{name}-%{version}-src
 
 %build
-cp /usr/share/automake/config.sub .
+cp /usr/share/automake/config.sub  .
 %configure2_13 \
 	--enable-extra-ace \
 	--enable-runidn
