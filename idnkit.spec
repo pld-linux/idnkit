@@ -1,4 +1,5 @@
-Summary:	idnkit
+Summary:	idnkit - internationalized domain name toolkit
+Summary(pl):	idnkit - zestaw narzêdzi do umiêdzynarodowionych nazw domen
 Name:		idnkit
 Version:	1.0
 Release:	2
@@ -7,23 +8,30 @@ Group:		Libraries
 Source0:	http://www.nic.ad.jp/ja/idn/idnkit/download/sources/%{name}-%{version}-src.tar.gz
 # Source0-md5:	e8863c21c5049af358bd59c384ff3e5d
 URL:		http://www.nic.ad.jp/en/idn/index.html
-BuildRequires:	autoconf
-BuildRequires:	libtool
-Requires(post,postun):	/sbin/ldconfig
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 The 'idnkit' is an open source, BSD-like licensed software that
 provides functionalities about Internationalized Domain Name
 processing standardized at IETF. Major features that idnkit provides
-are as follows.
-
+are as follows:
  - libidnkit - Core library for IDN processing,
  - libidnkitlite - Light Weight library for IDN processing (UTF-8
    only),
  - idnconv - DNS zone / configuration file encoding converter
  - runidn / idn wrapper - Dynamic link resolver library for UNIX /
    Windows
+
+%description -l pl
+idnkit to wolnodostêpne na licencji typu BSD oprogramowanie
+zapewniaj±ce funkcjonalno¶æ zwi±zan± z obs³ug± umiêdzynarodowionych
+nazw domen (IDN - Internationalized Domain Name) standaryzowan± przez
+IETF. G³ówne w³asno¶ci dostarczane przez idnkit s± nastêpuj±ce:
+ - libidnkit - g³ówna biblioteka do przetwarzania IDN,
+ - libidnkitlite - lekka biblioteka do przetwarzania IDN (tylko UTF-8),
+ - idnconv - konwerter kodowania plików konfiguracyjnych i stref DNS
+ - runidn / idn wrapper - dynamicznie linkowana biblioteka resolvera
+   dla uniksów i Windows.
 
 %package devel
 Summary:	Header files for idnkit
@@ -53,9 +61,6 @@ Statyczna biblioteka idnkit.
 %setup -q -n %{name}-%{version}-src
 
 %build
-#%%{__libtoolize}
-#%%{__autoconf}
-#%%{__aclocal}
 %configure2_13 \
 	--enable-extra-ace \
 	--enable-runidn
@@ -77,15 +82,15 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog README NEWS
 %doc %lang(ja) README.ja
-%attr(644,root,root) %config(noreplace) %verify(not size md5 mtime) %{_sysconfdir}/idn.conf
-%attr(644,root,root) %config(noreplace) %verify(not size md5 mtime) %{_sysconfdir}/idnalias.conf
+%config(noreplace) %verify(not size md5 mtime) %{_sysconfdir}/idn.conf
+%config(noreplace) %verify(not size md5 mtime) %{_sysconfdir}/idnalias.conf
 %attr(755,root,root) %{_bindir}/idnconv
 %attr(755,root,root) %{_bindir}/runidn
 %attr(755,root,root) %{_libdir}/libidnkit*.so.*.*.*
 # Yes, this is for dlopen()
-%attr(644,root,root) %{_libdir}/libidnkit*.la
-%attr(755,root,root) %dir %{_datadir}/idnkit
-%attr(644,root,root) %{_datadir}/idnkit/*.map
+%{_libdir}/libidnkit*.la
+%dir %{_datadir}/idnkit
+%{_datadir}/idnkit/*.map
 %{_mandir}/man1/*.1*
 %{_mandir}/man5/*.5*
 
