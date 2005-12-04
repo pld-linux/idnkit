@@ -84,8 +84,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc ChangeLog README NEWS
 %doc %lang(ja) README.ja
-%config(noreplace) %verify(not size md5 mtime) %{_sysconfdir}/idn.conf
-%config(noreplace) %verify(not size md5 mtime) %{_sysconfdir}/idnalias.conf
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/idn.conf
+%config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/idnalias.conf
 %attr(755,root,root) %{_bindir}/idnconv
 %attr(755,root,root) %{_bindir}/runidn
 %attr(755,root,root) %{_libdir}/libidnkit*.so.*.*.*
