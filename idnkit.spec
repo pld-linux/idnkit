@@ -1,5 +1,5 @@
 Summary:	idnkit - internationalized domain name toolkit
-Summary(pl):	idnkit - zestaw narzêdzi do umiêdzynarodowionych nazw domen
+Summary(pl.UTF-8):   idnkit - zestaw narzÄ™dzi do umiÄ™dzynarodowionych nazw domen
 Name:		idnkit
 Version:	1.0
 Release:	4
@@ -23,39 +23,39 @@ are as follows:
  - runidn / idn wrapper - Dynamic link resolver library for UNIX /
    Windows
 
-%description -l pl
-idnkit to wolnodostêpne na licencji typu BSD oprogramowanie
-zapewniaj±ce funkcjonalno¶æ zwi±zan± z obs³ug± umiêdzynarodowionych
-nazw domen (IDN - Internationalized Domain Name) standaryzowan± przez
-IETF. G³ówne w³asno¶ci dostarczane przez idnkit s± nastêpuj±ce:
- - libidnkit - g³ówna biblioteka do przetwarzania IDN,
+%description -l pl.UTF-8
+idnkit to wolnodostÄ™pne na licencji typu BSD oprogramowanie
+zapewniajÄ…ce funkcjonalnoÅ›Ä‡ zwiÄ…zanÄ… z obsÅ‚ugÄ… umiÄ™dzynarodowionych
+nazw domen (IDN - Internationalized Domain Name) standaryzowanÄ… przez
+IETF. GÅ‚Ã³wne wÅ‚asnoÅ›ci dostarczane przez idnkit sÄ… nastÄ™pujÄ…ce:
+ - libidnkit - gÅ‚Ã³wna biblioteka do przetwarzania IDN,
  - libidnkitlite - lekka biblioteka do przetwarzania IDN (tylko UTF-8),
- - idnconv - konwerter kodowania plików konfiguracyjnych i stref DNS
+ - idnconv - konwerter kodowania plikÃ³w konfiguracyjnych i stref DNS
  - runidn / idn wrapper - dynamicznie konsolidowana biblioteka
-   resolvera dla uniksów i Windows.
+   resolvera dla uniksÃ³w i Windows.
 
 %package devel
 Summary:	Header files for idnkit
-Summary(pl):	Pliki nag³ówkowe idnkit
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe idnkit
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files for idnkit.
 
-%description devel -l pl
-Pliki nag³ówkowe idnkit.
+%description devel -l pl.UTF-8
+Pliki nagÅ‚Ã³wkowe idnkit.
 
 %package static
 Summary:	Static idnkit library
-Summary(pl):	Statyczna biblioteka idnkit
+Summary(pl.UTF-8):   Statyczna biblioteka idnkit
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 Static idnkit library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Statyczna biblioteka idnkit.
 
 %prep
