@@ -1,5 +1,5 @@
 Summary:	idnkit - internationalized domain name toolkit
-Summary(pl.UTF-8):   idnkit - zestaw narzędzi do umiędzynarodowionych nazw domen
+Summary(pl.UTF-8):	idnkit - zestaw narzędzi do umiędzynarodowionych nazw domen
 Name:		idnkit
 Version:	1.0
 Release:	4
@@ -36,7 +36,7 @@ IETF. Główne własności dostarczane przez idnkit są następujące:
 
 %package devel
 Summary:	Header files for idnkit
-Summary(pl.UTF-8):   Pliki nagłówkowe idnkit
+Summary(pl.UTF-8):	Pliki nagłówkowe idnkit
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
@@ -48,7 +48,7 @@ Pliki nagłówkowe idnkit.
 
 %package static
 Summary:	Static idnkit library
-Summary(pl.UTF-8):   Statyczna biblioteka idnkit
+Summary(pl.UTF-8):	Statyczna biblioteka idnkit
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
