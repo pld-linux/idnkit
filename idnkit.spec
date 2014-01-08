@@ -88,24 +88,36 @@ rm -rf $RPM_BUILD_ROOT
 %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/idnalias.conf
 %attr(755,root,root) %{_bindir}/idnconv
 %attr(755,root,root) %{_bindir}/runidn
-%attr(755,root,root) %{_libdir}/libidnkit*.so.*.*.*
-%attr(755,root,root) %ghost %{_libdir}/libidnkit*.so.1
+%attr(755,root,root) %{_libdir}/libidnkit.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libidnkit.so.1
+%attr(755,root,root) %{_libdir}/libidnkitlite.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libidnkitlite.so.1
+%attr(755,root,root) %{_libdir}/libidnkitres.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libidnkitres.so.1
 # this one is used by runidn
 %{_libdir}/libidnkitres.la
 %dir %{_datadir}/idnkit
 %{_datadir}/idnkit/*.map
-%{_mandir}/man1/*.1*
-%{_mandir}/man5/*.5*
+%{_mandir}/man1/idnconv.1*
+%{_mandir}/man1/runidn.1*
+%{_mandir}/man5/idn.conf.5*
+%{_mandir}/man5/idnalias.conf.5*
+%{_mandir}/man5/idnrc.5*
 
 %files devel
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/libidnkit*.so
+%attr(755,root,root) %{_libdir}/libidnkit.so
+%attr(755,root,root) %{_libdir}/libidnkitlite.so
+%attr(755,root,root) %{_libdir}/libidnkitres.so
 %{_libdir}/libidnkit.la
 %{_libdir}/libidnkitlite.la
 %dir %{_includedir}/idn
 %{_includedir}/idn/*.h
-%{_mandir}/man3/*.3*
+%{_mandir}/man3/libidnkit.3*
+%{_mandir}/man3/libidnkitlite.3*
 
 %files static
 %defattr(644,root,root,755)
-%{_libdir}/libidnkit*.a
+%{_libdir}/libidnkit.a
+%{_libdir}/libidnkitlite.a
+%{_libdir}/libidnkitres.a
